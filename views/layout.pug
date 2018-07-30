@@ -1,7 +1,39 @@
 doctype html
 html
   head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='Exchange ATHX:TRTL:DATA with Athena.')
+   
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    link(rel='shortcut icon', type='image/x-icon', href='assets/favicon.ico')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css')
+    
+    script(defer='', src='https://use.fontawesome.com/releases/v5.1.0/js/all.js')
+
+    script(type='text/javascript').
+      document.addEventListener('DOMContentLoaded', () => {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+          if ($navbarBurgers.length > 0) {
+            $navbarBurgers.forEach( el => {
+              el.addEventListener('click', () => {
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+            });
+          });
+        }
+      });
+
   body
-    block content
+    section.hero.is-white.is-fullheight
+      include includes/header.pug
+
+      .hero-body
+        .container
+
+          block content
+
+      include includes/footer.pug

@@ -1,0 +1,32 @@
+.hero-head
+  header.navbar(style='padding-top:10px;')
+    .container
+      .navbar-brand
+        a.navbar-item.is-size-3.has-text-weight-semibold
+          | Athena
+        span.navbar-burger.burger(data-target='navbarMenu')
+          span
+          span
+          span
+      #navbarMenu.navbar-menu
+        .navbar-end
+          span.navbar-item
+            a.button.is-light(href='http://explorer.athx.org')
+              span.icon
+                i.fa.fa-cubes
+              span Explorer
+          span.navbar-item
+            a.button.is-light(href='http://wallet.athx.org/')
+              span.icon
+                i.fa.fa-wallet
+              span Wallet
+          span.navbar-item
+            a.button.is-light(href='http://mining.athx.org')
+              span.icon
+                i.fa.fa-server
+              span Mining
+          span.navbar-item
+            a.button.is-light(href='http://exchange.athx.org')
+              span.icon
+                i.fa.fa-exchange-alt
+              span Exchange

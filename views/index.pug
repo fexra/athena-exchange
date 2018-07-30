@@ -1,5 +1,67 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+  p.title.has-text-centered
+    | select a pair
+  
+  hr
+
+  .tile.is-ancestor
+    .tile.is-parent.is-6.has-text-centered
+      article.tile.is-child.notification
+       p
+        | BASE CURRENCY
+        br
+        br
+        | (TRTL ICON)
+
+    .tile.is-parent.is-6.has-text-centered
+      article.tile.is-child.notification
+       p
+        | QUOTE CURRENCY
+        br
+        br
+        | (KARAI ICON)
+
+  .tile.is-ancestor
+    .tile.is-parent.is-12.button.has-text-centered.is-info
+
+      | Next
+
+
+  hr
+
+  p.subtitle.has-text-centered
+   | screen afer next is clicked
+
+  .tile.is-ancestor
+    .tile.is-parent.is-12.has-text-centered
+      article.tile.is-child.notification
+        
+        p.subtitle.is-size-5
+          | Deposit Amount
+        input.input
+        
+        p.subtitle.is-size-5
+          | Receive Amount
+        input.input
+                
+        p.subtitle.is-size-5
+          | Receive Address
+        input.input
+                
+        p.subtitle.is-size-5
+          | Deposit Address (in case of refund)
+        input.input
+
+  .tile.is-ancestor
+    .tile.is-parent.is-12.button.has-text-centered.is-success
+      | Start!
+
+  hr
+
+  p.subtitle.has-text-centered
+   | screen afer next is click
+   br
+   | finish page (show pid, etc)
